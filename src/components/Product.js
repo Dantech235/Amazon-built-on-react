@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Currency from "react-currency-formatter";
+// import Currency from "react-currency-formatter";
+import CurrencyFormat from "react-currency-format";
 
 // import { useState } from "react/cjs/react.production.min";
 import { StarIcon } from "@heroicons/react/outline";
@@ -41,7 +42,7 @@ function Product({ id, title, price, description, category, image }) {
       <p className="text-xs my-2 line-clamp-2">{description}</p>
 
       <div className="mb-5">
-        <Currency quantity={price} currency="GBP" />
+        <CurrencyFormat quantity={price} currency="GBP" />
       </div>
       {hasPrime && (
         <div className="flex items-center space-x-2 -mt-5">
